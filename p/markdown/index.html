@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Markdown基本语法 Markdown 基本语法 | Markdown 教程\nMarkdown是一种轻量级标记语言，排版语法简洁，让人们更多地关注内容本身而非排版。它使用易读易写的纯文本格式编写文档，可与HTML混编，可导出 HTML、PDF 以及本身的 .md 格式的文件。因简洁、高效、易读、易写，Markdown被大量使用，如Github、Wikipedia、简书等。\n">
+<title>Markdown</title>
+
+<link rel='canonical' href='http://localhost:1313/p/markdown/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Markdown">
+<meta property='og:description' content="Markdown基本语法 Markdown 基本语法 | Markdown 教程\nMarkdown是一种轻量级标记语言，排版语法简洁，让人们更多地关注内容本身而非排版。它使用易读易写的纯文本格式编写文档，可与HTML混编，可导出 HTML、PDF 以及本身的 .md 格式的文件。因简洁、高效、易读、易写，Markdown被大量使用，如Github、Wikipedia、简书等。\n">
+<meta property='og:url' content='http://localhost:1313/p/markdown/'>
+<meta property='og:site_name' content='李一飞'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-04-23T00:17:28&#43;08:00'/><meta property='article:modified_time' content='2025-04-23T00:17:28&#43;08:00'/>
+<meta name="twitter:title" content="Markdown">
+<meta name="twitter:description" content="Markdown基本语法 Markdown 基本语法 | Markdown 教程\nMarkdown是一种轻量级标记语言，排版语法简洁，让人们更多地关注内容本身而非排版。它使用易读易写的纯文本格式编写文档，可与HTML混编，可导出 HTML、PDF 以及本身的 .md 格式的文件。因简洁、高效、易读、易写，Markdown被大量使用，如Github、Wikipedia、简书等。\n">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/photo_hu_8d9f4077e2c8f0d8.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🤗</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">李一飞</a></h1>
+            <h2 class="site-description">欢迎来到我的博客</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/217766274?spm_id_from=333.1007.0.0'
+                        target="_blank"
+                        title="Bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-bilibili"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-6z" /><path d="M8 3l2 3" /><path d="M16 3l-2 3" /><path d="M9 13v-2" /><path d="M15 11v2" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/HelloLiYifei'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+                    
+                        <li id="i18n-switch">  
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                            <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
+                                
+                                    <option value="http://localhost:1313/" selected>中文</option>
+                                
+                                    <option value="http://localhost:1313/en/" >English</option>
+                                
+                            </select>
+                        </li>
+                    
+                
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#markdown标题语法">Markdown标题语法</a></li>
+    <li><a href="#markdown段落语法">Markdown段落语法</a></li>
+    <li><a href="#markdown强调语法">Markdown强调语法</a>
+      <ol>
+        <li><a href="#粗体">粗体</a></li>
+        <li><a href="#斜体">斜体</a></li>
+        <li><a href="#粗斜体">粗斜体</a></li>
+      </ol>
+    </li>
+    <li><a href="#markdown引用语法">Markdown引用语法</a></li>
+    <li><a href="#markdown列表语法">Markdown列表语法</a>
+      <ol>
+        <li><a href="#有序列表">有序列表</a></li>
+        <li><a href="#无序列表">无序列表</a></li>
+        <li><a href="#在列表中添加其他元素">在列表中添加其他元素</a>
+          <ol>
+            <li><a href="#段落">段落</a></li>
+            <li><a href="#引用">引用</a></li>
+            <li><a href="#代码块">代码块</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#markdown代码语法">Markdown代码语法</a>
+      <ol>
+        <li><a href="#代码块-1">代码块</a></li>
+        <li><a href="#围栏代码块">围栏代码块</a></li>
+        <li><a href="#代码高亮">代码高亮</a></li>
+      </ol>
+    </li>
+    <li><a href="#markdown-链接语法">Markdown 链接语法</a>
+      <ol>
+        <li><a href="#给链接增加-title">给链接增加 Title</a></li>
+        <li><a href="#网址和email地址">网址和Email地址</a></li>
+        <li><a href="#带格式化的链接">带格式化的链接</a></li>
+        <li><a href="#引用类型链接">引用类型链接</a>
+          <ol>
+            <li><a href="#链接的第一部分格式">链接的第一部分格式</a></li>
+            <li><a href="#链接的第二部分格式">链接的第二部分格式</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#markdown-图片语法">Markdown 图片语法</a>
+      <ol>
+        <li><a href="#链接图片">链接图片</a></li>
+      </ol>
+    </li>
+    <li><a href="#markdown-转义字符语法">Markdown 转义字符语法</a>
+      <ol>
+        <li><a href="#可做转义的字符">可做转义的字符</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/markdown/">Markdown</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2025-04-23</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="markdown基本语法">Markdown基本语法
+</h1><blockquote>
+<p><a class="link" href="https://markdown.com.cn/basic-syntax/"  target="_blank" rel="noopener"
+    >Markdown 基本语法 | Markdown 教程</a></p></blockquote>
+<p>Markdown是一种轻量级标记语言，排版语法简洁，让人们更多地关注内容本身而非排版。它使用易读易写的纯文本格式编写文档，可与HTML混编，可导出 HTML、PDF 以及本身的 .md 格式的文件。因简洁、高效、易读、易写，Markdown被大量使用，如Github、Wikipedia、简书等。</p>
+<h2 id="markdown标题语法">Markdown标题语法
+</h2><p>要创建标题，请在单词或短语前面添加井号 (<code>#</code>) 。<code>#</code> 的数量代表了标题的级别。例如，添加三个 <code>#</code> 表示创建一个三级标题 (<code>&lt;h3&gt;</code>) (例如：<code>### My Header</code>)。</p>
+<blockquote>
+<p># 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+###### 六级标题</p></blockquote>
+<h2 id="markdown段落语法">Markdown段落语法
+</h2><p>要创建段落，请使用空白行将一行或多行文本进行分隔。
+要用空格（spaces）或制表符（ tabs）缩进段落。
+在一行的末尾添加两个或多个空格，然后按回车键,即可创建一个换行(<code>&lt;br&gt;</code>)。</p>
+<h2 id="markdown强调语法">Markdown强调语法
+</h2><h3 id="粗体">粗体
+</h3><p>要加粗文本，请在单词或短语的前后各添加两个星号（asterisks）或下划线（underscores）。如需加粗一个单词或短语的中间部分用以表示强调的话，请在要加粗部分的两侧各添加两个星号（asterisks）。</p>
+<p>Markdown: <code>**bold text**</code> 或者 <code>__bold text__</code>
+预期效果:    <strong>bold text</strong></p>
+<h3 id="斜体">斜体
+</h3><p>要用斜体显示文本，请在单词或短语前后添加一个星号（asterisk）或下划线（underscore）。要斜体突出单词的中间部分，请在字母前后各添加一个星号，中间不要带空格。</p>
+<p>Markdown: <code>*Italic*</code> 或者 <code>_Italic_</code>
+预期效果:    <em>Italic</em></p>
+<h3 id="粗斜体">粗斜体
+</h3><p>要同时用粗体和斜体突出显示文本，请在单词或短语的前后各添加三个星号或下划线。要加粗并用斜体显示单词或短语的中间部分，请在要突出显示的部分前后各添加三个星号，中间不要带空格。</p>
+<p>Markdown: <code>***bold italic***</code> <code>**_bold italic_**</code> <code>**_bold italic_**</code> <code>__*bold italic*__</code> <code>___bold italic___</code>
+预期效果:   <strong><em>bold italic</em></strong></p>
+<h2 id="markdown引用语法">Markdown引用语法
+</h2><p>要创建块引用，请在段落前添加一个 <code>&gt;</code> 符号。</p>
+<p>Markdown</p>
+<p><code>&gt; Dorothy followed her through many of the beautiful rooms in her castle.</code></p>
+<p>预期效果</p>
+<blockquote>
+<p>Dorothy followed her through many of the beautiful rooms in her castle.</p></blockquote>
+<p>块引用可以包含多个段落。为段落之间的空白行添加一个 <code>&gt;</code> 符号。</p>
+<p>Markdown</p>
+<p><code>&gt; Dorothy followed her through many of the beautiful rooms in her castle.</code>
+<code>&gt;</code>
+<code>&gt; The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.</code></p>
+<p>预期效果</p>
+<blockquote>
+<p>Dorothy followed her through many of the beautiful rooms in her castle.</p>
+<p>The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.</p></blockquote>
+<h2 id="markdown列表语法">Markdown列表语法
+</h2><h3 id="有序列表">有序列表
+</h3><p>要创建有序列表，请在每个列表项前添加数字并紧跟一个英文句点。数字不必按数学顺序排列，但是列表应当以数字 1 起始。</p>
+<p>Markdown:</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th><code>1. Frist</code><br /><code>2. Second </code><br /><code>3. Third</code></th>
+          <th><code>1. First</code><br /><code>1. Second</code><br /><code>1. Third</code></th>
+          <th><code>1. First</code><br /><code>8. Second</code><br /><code>7. Third</code></th>
+          <th><code>1. First</code><br /><code>2. Second</code><br />  <code> 1. First</code><br />  <code>2. Second </code></th>
+      </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div>
+<p>预期效果</p>
+<blockquote>
+<p>有序列表</p>
+<ol>
+<li>First</li>
+<li>Second</li>
+<li>Third</li>
+</ol></blockquote>
+<blockquote>
+<p>嵌套使用</p>
+<ol>
+<li>First</li>
+<li>Second</li>
+<li>First</li>
+<li>Second</li>
+</ol></blockquote>
+<h3 id="无序列表">无序列表
+</h3><p>要创建无序列表，请在每个列表项前面添加破折号 (-)、星号 (*) 或加号 (+) 。缩进一个或多个列表项可创建嵌套列表。</p>
+<p>Markdown</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th><code>- Frist</code><br /><code>- Second</code><br /><code>- Thrid</code></th>
+          <th><code>+ First</code><br /><code>+ Second</code><br /><code>+ Thrid</code></th>
+          <th><code>* First</code><br /><code>* Second</code><br /><code>* Third</code></th>
+          <th><code>- First</code><br /><code>- Second</code><br />  <code>- First</code><br />  <code>- Second</code></th>
+      </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div>
+<p>预期效果</p>
+<blockquote>
+<p>无序列表</p>
+<ul>
+<li>First</li>
+<li>Second</li>
+<li>Third</li>
+</ul></blockquote>
+<blockquote>
+<p>嵌套使用</p>
+<ul>
+<li>
+<p>First</p>
+</li>
+<li>
+<p>Second</p>
+<ul>
+<li>
+<p>First</p>
+</li>
+<li>
+<p>Second</p>
+</li>
+</ul>
+</li>
+</ul></blockquote>
+<h3 id="在列表中添加其他元素">在列表中添加其他元素
+</h3><p>要在保留列表连续性的同时在列表中添加另一种元素，请将该元素缩进四个空格或一个制表符，如下例所示：</p>
+<h4 id="段落">段落
+</h4><p>Markdown</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">*   This is the first list item.
+</span></span><span class="line"><span class="cl">*   Here&#39;s the second list item.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    I need to add another paragraph below the second list item.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">*   And here&#39;s the third list item.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>预期效果</p>
+<ul>
+<li>
+<p>This is the first list item.</p>
+</li>
+<li>
+<p>Here&rsquo;s the second list item.</p>
+<p>I need to add another paragraph below the second list item.</p>
+</li>
+<li>
+<p>And here&rsquo;s the third list item.</p>
+</li>
+</ul>
+<h4 id="引用">引用
+</h4><p>Markdown</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">*   This is the first list item.
+</span></span><span class="line"><span class="cl">*   Here&#39;s the second list item.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    &gt; A blockquote would look great below the second list item.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">*   And here&#39;s the third list item.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>预期效果</p>
+<ul>
+<li>
+<p>This is the first list item.</p>
+</li>
+<li>
+<p>Here&rsquo;s the second list item.</p>
+<blockquote>
+<p>A blockquote would look great below the second list item.</p></blockquote>
+</li>
+<li>
+<p>And here&rsquo;s the third list item.</p>
+</li>
+</ul>
+<h4 id="代码块">代码块
+</h4><p><a class="link" href="https://markdown.com.cn/basic-syntax/lists.html#code-blocks"  target="_blank" rel="noopener"
+    >代码块</a>通常采用四个空格或一个制表符缩进。当它们被放在列表中时，请将它们缩进八个空格或两个制表符。</p>
+<p>Markdown</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">1.  Open the file.
+</span></span><span class="line"><span class="cl">2.  Find the following code block on line 21:
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">        &amp;lt;html&gt;
+</span></span><span class="line"><span class="cl">          &amp;lt;head&gt;
+</span></span><span class="line"><span class="cl">            &amp;lt;title&gt;Test&amp;lt;/title&gt;
+</span></span><span class="line"><span class="cl">          &amp;lt;/head&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">3.  Update the title to match the name of your website.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>预期效果</p>
+<ol>
+<li>
+<p>Open the file.</p>
+</li>
+<li>
+<p>Find the following code block on line 21:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">&amp;lt;html&gt;
+</span></span><span class="line"><span class="cl">  &amp;lt;head&gt;
+</span></span><span class="line"><span class="cl">    &amp;lt;title&gt;Test&amp;lt;/title&gt;
+</span></span><span class="line"><span class="cl">  &amp;lt;/head&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>Update the title to match the name of your website.</p>
+</li>
+</ol>
+<h2 id="markdown代码语法">Markdown代码语法
+</h2><p>要将单词或短语表示为代码，请将其包裹在反引号 (` ) 中。</p>
+<p>Markdown</p>
+<p>Use `code` in your Markdown file.</p>
+<p>预期效果</p>
+<p>Use <code>code</code> in your Markdown file.</p>
+<h3 id="代码块-1">代码块
+</h3><p>要创建代码块，请将代码块的每一行缩进至少四个空格或一个制表符。</p>
+<p>Markdown</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">    &amp;lt;html&gt;
+</span></span><span class="line"><span class="cl">      &amp;lt;head&gt;
+</span></span><span class="line"><span class="cl">      &amp;lt;/head&gt;
+</span></span><span class="line"><span class="cl">    &amp;lt;/html&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>预期效果</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">&amp;lt;html&gt;
+</span></span><span class="line"><span class="cl">  &amp;lt;head&gt;
+</span></span><span class="line"><span class="cl">  &amp;lt;/head&gt;
+</span></span><span class="line"><span class="cl">&amp;lt;/html&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="围栏代码块">围栏代码块
+</h3><p>Markdown基本语法允许您通过将行缩进四个空格或一个制表符来创建<a class="link" href="https://markdown.com.cn/basic-syntax/code-blocks.html"  target="_blank" rel="noopener"
+    >代码块</a>。如果发现不方便，请尝试使用受保护的代码块。根据Markdown处理器或编辑器的不同，您将在代码块之前和之后的行上使用三个反引号（```）或三个波浪号（~~~）。</p>
+<p>Markdown</p>
+<p>```
+{
+&ldquo;firstName&rdquo;: &ldquo;John&rdquo;,
+&ldquo;lastName&rdquo;: &ldquo;Smith&rdquo;,
+&ldquo;age&rdquo;: 25
+}
+```</p>
+<p>预期效果</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">  &#34;firstName&#34;: &#34;John&#34;,
+</span></span><span class="line"><span class="cl">  &#34;lastName&#34;: &#34;Smith&#34;,
+</span></span><span class="line"><span class="cl">  &#34;age&#34;: 25
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="代码高亮">代码高亮
+</h3><p>许多Markdown处理器都支持受围栏代码块的语法突出显示。使用此功能，您可以为编写代码的任何语言添加颜色突出显示。要添加语法突出显示，请在受防护的代码块之前的反引号旁边指定一种语言。</p>
+<p>Markdown</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">```json
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">  &#34;firstName&#34;: &#34;John&#34;,
+</span></span><span class="line"><span class="cl">  &#34;lastName&#34;: &#34;Smith&#34;,
+</span></span><span class="line"><span class="cl">  &#34;age&#34;: 25
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">```
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>预期效果</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;firstName&#34;</span><span class="p">:</span> <span class="s2">&#34;John&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;lastName&#34;</span><span class="p">:</span> <span class="s2">&#34;Smith&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;age&#34;</span><span class="p">:</span> <span class="mi">25</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="markdown-链接语法">Markdown 链接语法
+</h2><p>链接文本放在中括号内，链接地址放在后面的括号中，链接title可选。</p>
+<p>超链接Markdown语法代码：<code>[超链接显示名](超链接地址 &quot;超链接title&quot;)</code></p>
+<p>对应的HTML代码：<code>&lt;a href=&quot;超链接地址&quot; title=&quot;超链接title&quot;&gt;超链接显示名&lt;/a&gt;</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">这是一个链接 [Markdown语法](https://markdown.com.cn)。
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>渲染效果如下：</p>
+<p>这是一个链接 <a class="link" href="https://markdown.com.cn/"  target="_blank" rel="noopener"
+    >Markdown语法 (opens new window)</a>。</p>
+<h3 id="给链接增加-title">给链接增加 Title
+</h3><p>链接title是当鼠标悬停在链接上时会出现的文字，这个title是可选的，它放在圆括号中链接地址后面，跟链接地址之间以空格分隔。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">这是一个链接 [Markdown语法](https://markdown.com.cn &#34;最好的markdown教程&#34;)。
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>渲染效果如下：</p>
+<p>这是一个链接 <a class="link" href="https://markdown.com.cn/"  target="_blank" rel="noopener"
+    >Markdown语法 (opens new window)</a>。</p>
+<h3 id="网址和email地址">网址和Email地址
+</h3><p>使用尖括号可以很方便地把URL或者email地址变成可点击的链接。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">&lt;https://markdown.com.cn&gt;
+</span></span><span class="line"><span class="cl">&lt;fake@example.com&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>渲染效果如下：</p>
+<p><a class="link" href="https://markdown.com.cn/"  target="_blank" rel="noopener"
+    >https://markdown.com.cn(opens new window)</a>
+<a class="link" href="mailto:fake@example.com" >fake@example.com</a></p>
+<h3 id="带格式化的链接">带格式化的链接
+</h3><p><a class="link" href="https://markdown.com.cn/basic-syntax/links.html#emphasis"  target="_blank" rel="noopener"
+    >强调</a> 链接, 在链接语法前后增加星号。 要将链接表示为代码，请在方括号中添加反引号。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">I love supporting the **[EFF](https://eff.org)**.
+</span></span><span class="line"><span class="cl">This is the *[Markdown Guide](https://www.markdownguide.org)*.
+</span></span><span class="line"><span class="cl">See the section on [`code`](#code).
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>渲染效果如下：</p>
+<p>I love supporting the <strong><a class="link" href="https://eff.org/"  target="_blank" rel="noopener"
+    >EFF (opens new window)</a></strong>.
+This is the <em><a class="link" href="https://www.markdownguide.org/"  target="_blank" rel="noopener"
+    >Markdown Guide (opens new window)</a></em>.
+See the section on <a class="link" href="https://markdown.com.cn/basic-syntax/links.html#code"  target="_blank" rel="noopener"
+    ><code>code</code></a>.</p>
+<h3 id="引用类型链接">引用类型链接
+</h3><p>引用样式链接是一种特殊的链接，它使URL在Markdown中更易于显示和阅读。参考样式链接分为两部分：与文本保持内联的部分以及存储在文件中其他位置的部分，以使文本易于阅读。</p>
+<h4 id="链接的第一部分格式">链接的第一部分格式
+</h4><p>引用类型的链接的第一部分使用两组括号进行格式设置。第一组方括号包围应显示为链接的文本。第二组括号显示了一个标签，该标签用于指向您存储在文档其他位置的链接。</p>
+<p>尽管不是必需的，可以在第一组和第二组括号之间包含一个空格。第二组括号中的标签不区分大小写，可以包含字母，数字，空格或标点符号。</p>
+<p>以下示例格式对于链接的第一部分效果相同：</p>
+<ul>
+<li><code>[hobbit-hole][1]</code></li>
+<li><code>[hobbit-hole] [1]</code></li>
+</ul>
+<h4 id="链接的第二部分格式">链接的第二部分格式
+</h4><p>引用类型链接的第二部分使用以下属性设置格式：</p>
+<ol>
+<li>放在括号中的标签，其后紧跟一个冒号和至少一个空格（例如<code>[label]:</code>）。</li>
+<li>链接的URL，可以选择将其括在尖括号中。</li>
+<li>链接的可选标题，可以将其括在双引号，单引号或括号中。</li>
+</ol>
+<p>以下示例格式对于链接的第二部分效果相同：</p>
+<ul>
+<li><code>[1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle</code></li>
+<li><code>[1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle &quot;Hobbit lifestyles&quot;</code></li>
+<li><code>[1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle 'Hobbit lifestyles'</code></li>
+<li><code>[1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle (Hobbit lifestyles)</code></li>
+<li><code>[1]: &lt;https://en.wikipedia.org/wiki/Hobbit#Lifestyle&gt; &quot;Hobbit lifestyles&quot;</code></li>
+<li><code>[1]: &lt;https://en.wikipedia.org/wiki/Hobbit#Lifestyle&gt; 'Hobbit lifestyles'</code></li>
+<li><code>[1]: &lt;https://en.wikipedia.org/wiki/Hobbit#Lifestyle&gt; (Hobbit lifestyles)</code></li>
+</ul>
+<p>可以将链接的第二部分放在Markdown文档中的任何位置。有些人将它们放在出现的段落之后，有些人则将它们放在文档的末尾（例如尾注或脚注）。</p>
+<h2 id="markdown-图片语法">Markdown 图片语法
+</h2><p>要添加图像，请使用感叹号 (<code>!</code>), 然后在方括号增加替代文本，图片链接放在圆括号里，括号里的链接后可以增加一个可选的图片标题文本。</p>
+<p>插入图片Markdown语法代码：<code>![图片alt](图片链接 &quot;图片title&quot;)</code>。</p>
+<p>对应的HTML代码：<code>&lt;img src=&quot;图片链接&quot; alt=&quot;图片alt&quot; title=&quot;图片title&quot;&gt;</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">![这是图片](/assets/img/philly-magic-garden.jpg &#34;Magic Gardens&#34;)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>渲染效果如下：</p>
+<p><img src="https://markdown.com.cn/assets/img/philly-magic-garden.9c0b4415.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="这是图片"
+	
+	
+></p>
+<h3 id="链接图片">链接图片
+</h3><p>给图片增加链接，请将图像的Markdown 括在方括号中，然后将链接添加在圆括号中。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">[![沙漠中的岩石图片](/assets/img/shiprock.jpg &#34;Shiprock&#34;)](https://markdown.com.cn)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>渲染效果如下：</p>
+<p><a class="link" href="https://markdown.com.cn/"  target="_blank" rel="noopener"
+    ><img src="https://markdown.com.cn/assets/img/shiprock.c3b9a023.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="沙漠中的岩石图片"
+	
+	
+></a></p>
+<h2 id="markdown-转义字符语法">Markdown 转义字符语法
+</h2><p>要显示原本用于格式化 Markdown 文档的字符，请在字符前面添加反斜杠字符 \ 。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">\* Without the backslash, this would be a bullet in an unordered list.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>渲染效果如下：</p>
+<p>* Without the backslash, this would be a bullet in an unordered list.</p>
+<h3 id="可做转义的字符">可做转义的字符
+</h3><p>以下列出的字符都可以通过使用反斜杠字符从而达到转义目的。</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>Character</th>
+          <th>Name</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>\</td>
+          <td>backslash</td>
+      </tr>
+      <tr>
+          <td>`</td>
+          <td>backtick (see also <a class="link" href="https://markdown.com.cn/basic-syntax/escaping-characters.html#escaping-backticks"  target="_blank" rel="noopener"
+    >escaping backticks in code</a>)</td>
+      </tr>
+      <tr>
+          <td>*</td>
+          <td>asterisk</td>
+      </tr>
+      <tr>
+          <td>_</td>
+          <td>underscore</td>
+      </tr>
+      <tr>
+          <td>{ }</td>
+          <td>curly braces</td>
+      </tr>
+      <tr>
+          <td>[ ]</td>
+          <td>brackets</td>
+      </tr>
+      <tr>
+          <td>( )</td>
+          <td>parentheses</td>
+      </tr>
+      <tr>
+          <td>#</td>
+          <td>pound sign</td>
+      </tr>
+      <tr>
+          <td>+</td>
+          <td>plus sign</td>
+      </tr>
+      <tr>
+          <td>-</td>
+          <td>minus sign (hyphen)</td>
+      </tr>
+      <tr>
+          <td>.</td>
+          <td>dot</td>
+      </tr>
+      <tr>
+          <td>!</td>
+          <td>exclamation mark</td>
+      </tr>
+      <tr>
+          <td>|</td>
+          <td>pipe (see also <a class="link" href="https://markdown.com.cn/extended-syntax/escaping-pipe-characters-in-tables.html"  target="_blank" rel="noopener"
+    >escaping pipe in tables</a>)</td>
+      </tr>
+  </tbody>
+</table></div>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 HelloLiYifei
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.dacc73cf5f0e0103019dfaac906fe8158a2b6bcf7834ba1a0095cb12a81f8b7c.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
